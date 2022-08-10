@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Prime Number</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    footer a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+
+    <section class="mx-auto w-50 bg-success mt-5 p-5 text-center border border-primary rounded border-5">
+        <h3 class="text-white">Check Prime Number</h3>
+        <input class="w-50 form-control mx-auto" id="num">
+        <button class="w-50 mt-3 rounded bg-primary border border-0 text-white py-2"
+            onclick="checkPrime()">Check</button>
+        <p class="text-white pt-3 h4" id="resPara" style="display:none;"><span id="res"></span> Number</p>
+    </section>
+    <footer class="text-center pt-3">Develop By <a target="_blank"
+            href="https://www.linkedin.com/in/robiulalam762/">Robiul
+            Alam</a>
+    </footer>
+
+
+    <script>
+        var num, i, primeCheck, temp;
+        function checkPrime() {
+            num = parseInt(document.getElementById("num").value);
+            if (num) {
+                primeCheck = 0;
+                temp = document.getElementById("resPara");
+                temp.style.display = "block";
+                for (i = 2; i < num; i++) {
+                    if (num % 2 == 0) {
+                        primeCheck++;
+                        break;
+                    }
+                }
+                if (primeCheck == 0) {
+                    document.getElementById("res").innerHTML = num + " is a Prime";
+                }
+                else {
+                    document.getElementById("res").innerHTML = num + " is not a Prime";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
