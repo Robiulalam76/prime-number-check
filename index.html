@@ -17,6 +17,10 @@
         font-family: 'Inter', sans-serif;
     }
 
+    section h2 {
+        font-weight: 700;
+    }
+
     footer a {
         text-decoration: none;
     }
@@ -24,12 +28,14 @@
 
 <body>
 
-    <section class="mx-auto w-50 bg-success mt-5 p-5 text-center border border-primary rounded border-5">
-        <h3 class="text-white">Check Prime Number</h3>
-        <input class="w-50 form-control mx-auto" id="num">
-        <button class="w-50 mt-3 rounded bg-primary border border-0 text-white py-2"
-            onclick="checkPrime()">Check</button>
-        <p class="text-white pt-3 h4" id="resPara" style="display:none;"><span id="res"></span> Number</p>
+    <section class="container">
+        <section class="mx-auto w-lg-50 bg-success mt-5 p-5 text-center border border-primary rounded border-5">
+            <h2 class="text-white">Check Prime Number</h2>
+            <input class="w-50 form-control mx-auto" id="num" placeholder="Enter Your Number" required>
+            <button class="fw-bold w-50 mt-3 rounded bg-primary border border-0 text-white py-2"
+                onclick="checkPrime()">Check</button>
+            <p class="text-white pt-3 h4" id="resPara" style="display:none;"><span id="res"></span> Number</p>
+        </section>
     </section>
     <footer class="text-center pt-3">Develop By <a target="_blank"
             href="https://www.linkedin.com/in/robiulalam762/">Robiul
